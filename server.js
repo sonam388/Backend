@@ -18,12 +18,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: (
-      process.env.CORS_ORIGIN ||
-      "http://localhost:5173,https://dayodaygaushalatendukheda.org,https://www.dayodaygaushalatendukheda.org"
-    )
-      .split(",")
-      .map((origin) => origin.trim()),
+    origin: true,
     credentials: true,
   })
 );
