@@ -13,7 +13,8 @@ import volunteerRoutes from "./routes/volunteerRoutes.js";
 import galleryRoutes from "./routes/galleryRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
 import blogRoutes from "./routes/blogRoutes.js";
-import dashboardRoutes from "./routes/dashboardRoutes.js";
+import dashboardRoutes from "./routes/dashboardRoutes.js"; 
+import reviewRoutes from "./routes/reviewRoutes.js";
 
 connectDB();
 
@@ -74,7 +75,8 @@ app.use("/api/gallery", galleryRoutes);
 app.use("/api/upload", uploadRoutes);
 app.use("/api/blog", blogRoutes);
 app.use("/api/volunteer", volunteerRoutes);
-app.use("/api/dashboard", dashboardRoutes);
+app.use("/api/dashboard", dashboardRoutes); 
+app.use("/api/review", reviewRoutes);
 
 /* Error Handler */
 app.use((err, req, res, next) => {
